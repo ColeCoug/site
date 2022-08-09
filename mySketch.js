@@ -15,7 +15,7 @@ function draw() {
 	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
   rect(0,0,width,height);
 }
-function mousePressed() {save("Frozen_Fractal");}
+// function mousePressed() {save("Frozen_Fractal");}
 function preload() {
   Shader=new p5.Shader(this._renderer,`
 		precision highp float;
