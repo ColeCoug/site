@@ -18,11 +18,11 @@ function draw() {
 
   circle(mouseX, mouseY, 50);
 
-//   let xLabel = document.getElementById('x-label');
-//   xLabel.innerText = 'X: ' + mouseX;
+  let xLabel = document.getElementById('x-label');
+  xLabel.innerText = 'X: ' + mouseX;
 
-//   let yLabel = document.getElementById('y-label');
-//   yLabel.innerText = 'Y: ' + mouseY;
+  let yLabel = document.getElementById('y-label');
+  yLabel.innerText = 'Y: ' + mouseY;
 }
 // function mousePressed() {save("Frozen_Fractal");}
 function preload() {
