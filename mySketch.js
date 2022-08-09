@@ -6,7 +6,7 @@ let speed = 111;//256;
 let n = 0.7;//0.8;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
-//   canvas.parent('sketch-container');
+  canvas.parent('sketch-container');
   pixelDensity(1);
   noStroke();
 }
