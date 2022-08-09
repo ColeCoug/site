@@ -6,7 +6,7 @@ let speed = 111;//256;
 let n = 0.7;//0.8;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
-  canvas.parent('sketch-container');
+//   canvas.parent('sketch-container');
   pixelDensity(1);
   noStroke();
 }
@@ -16,13 +16,13 @@ function draw() {
 	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
   rect(0,0,width,height);
 
-  circle(mouseX, mouseY, 50);
+//   circle(mouseX, mouseY, 50);
 
-  let xLabel = document.getElementById('x-label');
-  xLabel.innerText = 'X: ' + mouseX;
+//   let xLabel = document.getElementById('x-label');
+//   xLabel.innerText = 'X: ' + mouseX;
 
-  let yLabel = document.getElementById('y-label');
-  yLabel.innerText = 'Y: ' + mouseY;
+//   let yLabel = document.getElementById('y-label');
+//   yLabel.innerText = 'Y: ' + mouseY;
 }
 // function mousePressed() {save("Frozen_Fractal");}
 function preload() {
