@@ -15,7 +15,7 @@ function draw() {
 	Shader.setUniform('pal',palette);
 	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
   rect(0,0,width,height);
-
+	fill(100);
   circle(mouseX, mouseY, 50);
 
   let xLabel = document.getElementById('x-label');
