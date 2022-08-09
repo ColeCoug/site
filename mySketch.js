@@ -8,6 +8,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
   canvas.parent('sketch-container');
 	pixelDensity(1);
+  pixelDensity(1);
   noStroke();
 }
 function draw() {
@@ -16,6 +17,7 @@ function draw() {
 	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
   rect(0,0,width,height);
   
+
   circle(mouseX, mouseY, 50);
 
   let xLabel = document.getElementById('x-label');
