@@ -11,12 +11,12 @@ function setup() {
   noStroke();
 }
 function draw() {
+	drawCircle();
   shader(Shader);
 	Shader.setUniform('pal',palette);
 	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
   rect(0,0,width,height);
-	fill(100);
-  circle(mouseX, mouseY, 50);
+  drawCircle();
 
   let xLabel = document.getElementById('x-label');
   xLabel.innerText = 'X: ' + mouseX;
@@ -24,6 +24,12 @@ function draw() {
   let yLabel = document.getElementById('y-label');
   yLabel.innerText = 'Y: ' + mouseY;
 }
+
+function drawCircle(){
+	fill(255);
+	circle(mouseX, mouseY, 50);
+}
+
 // function mousePressed() {save("Frozen_Fractal");}
 function preload() {
   Shader=new p5.Shader(this._renderer,`
