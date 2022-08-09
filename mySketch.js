@@ -27,7 +27,7 @@ function draw() {
 
 function drawCircle(){
 	fill(255);
-	circle(mouseX, mouseY, 50);
+	circle(mouseX, mouseY, 130);
 }
 
 // function mousePressed() {save("Frozen_Fractal");}
