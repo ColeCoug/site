@@ -4,6 +4,8 @@
 let Shader,palette;
 let speed = 111;//256;
 let n = 0.7;//0.8;
+let t = 0;
+let moving = True;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
 //   canvas.parent('sketch-container');
@@ -11,10 +13,13 @@ function setup() {
   noStroke();
 }
 function draw() {
+	if(moving){
+		t++;
+	}
 	drawCircle();
   shader(Shader);
 	Shader.setUniform('pal',palette);
-	Shader.setUniform('c',[sin(frameCount/speed)*n,cos(frameCount/speed)*n]);
+	Shader.setUniform('c',[sin(t/speed)*n,cos(t/speed)*n]);
   rect(0,0,width,height);
   drawCircle();
 
@@ -23,11 +28,17 @@ function draw() {
 
   let yLabel = document.getElementById('y-label');
   yLabel.innerText = 'Y: ' + mouseY;
+
 }
 
 function drawCircle(){
 	fill(255);
 	circle(mouseX, mouseY, 130);
+}
+
+function mousePressed(){
+	moving = !moving;
+
 }
 
 // function mousePressed() {save("Frozen_Fractal");}
