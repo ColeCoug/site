@@ -14,7 +14,7 @@ function setup() {
 }
 function draw() {
 	if(moving){
-		t++;
+		t=frameCount;
 	}
 	drawCircle();
   shader(Shader);
