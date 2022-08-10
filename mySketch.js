@@ -5,7 +5,7 @@ let Shader,palette;
 let speed = 111;//256;
 let n = 0.7;//0.8;
 let t = 0;
-let moving = True;
+let moving = true;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
 //   canvas.parent('sketch-container');
