@@ -8,7 +8,7 @@ let t = 0;
 let moving = true;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
-//   canvas.parent('sketch-container');
+  canvas.parent('sketch-container');
   pixelDensity(1);
   noStroke();
 }
