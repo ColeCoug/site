@@ -3,6 +3,10 @@ html, body {
     padding: 0;
 }
 
+textFill {
+    color: white;
+}
+
 /* canvas {
     display: block;
 } */
