@@ -8,7 +8,7 @@ let t = 0;
 let moving = true;
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
-  canvas.parent('sketch-container');
+//   canvas.parent('sketch-container');
   pixelDensity(1);
   noStroke();
 }
@@ -17,17 +17,17 @@ function draw() {
 		t++;
 	}
 	drawCircle();
-  shader(Shader);
+	shader(Shader);
 	Shader.setUniform('pal',palette);
 	Shader.setUniform('c',[sin(t/speed)*n,cos(t/speed)*n]);
-  rect(0,0,width,height);
-  drawCircle();
+  	rect(0,0,width,height);
+  	drawCircle();
 
-  let xLabel = document.getElementById('x-label');
-  xLabel.innerText = 'X: ' + mouseX;
+	let xLabel = document.getElementById('x-label');
+	xLabel.innerText = 'X: ' + mouseX;
 
-  let yLabel = document.getElementById('y-label');
-  yLabel.innerText = 'Y: ' + mouseY;
+	let yLabel = document.getElementById('y-label');
+	yLabel.innerText = 'Y: ' + mouseY;
 
 }
 
@@ -43,7 +43,7 @@ function mousePressed(){
 
 // function mousePressed() {save("Frozen_Fractal");}
 function preload() {
-  Shader=loadShader("shader.vert","shader.frag");
+	Shader=loadShader("shader.vert", "shader.frag");
 	palette=loadImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAABCAYAAAAxWXB3AAAAAXNSR0IArs4c6QAAAGRJREFUOE9jZGBg+M8ABiwMDAwcSDQyGyZHSIyQPDZzOJCsZoE6AUaDnIRDDGwUmjqYGNwrUHmQOnQxFoQc3FVIykE+AWNai7EwMPxhQOAfFLBB5gyE/uHlAeTYGM5sUEphYAAAjJafAWvSA74AAAAASUVORK5CYII=");
 }
 
